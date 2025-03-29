@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="shortcut icon" href="https://kurs-mjqz.onrender.com/images/bucket.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://kurs-mjqz.onrender.com/css/style.css">
+    <link rel="stylesheet" href="https://kurs-mjqz.onrender.com/css/output.css">
+    <title>Document</title>
+</head>
+<body class="text-slate-100 text-2xl w-full h-full bg-neutral-700 overflow-auto">
+     <header class="w-full h-18  m-auto flex items-center p-4 px-20 bg-neutral-900">
+        <div class="flex justify-between w-full items-center">
+            <a href="#" id="sigmar" class="text-5xl h-min">BUCCKEK</a>
+            <a href="#">Главная</a>
+            <a href="#">О нас</a>
+            <a href="#">Каталог</a>
+            <a href="#">Комментарии</a>
+            <a href="#">Закажи ведро</a>
+        </div>
+        <div class="flex hidden flex-col justify-between items-center bg-neutral-700 [&_*]:wHead [&_*]:text-center [&_*]:block">
+            <p>меню</p>
+            <a href="#">Главная</a>
+            <a href="#">О нас</a>
+            <a href="#">Каталог</a>
+            <a href="#">Комментарии</a>
+            <a href="#">Закажи ведро</a>
+        </div>
+    </header>
+    <script src="https://kurs-mjqz.onrender.com/js/header.js"></script>
+    <section class="w-11/12 flex h-full m-auto mt-12 justify-around p-6 bg-neutral-900">
+        <div class="w-2/4 h-5/6 self-center flex flex-col">
+            <h2 class="text-5xl pb-3">Ведро:</h2>
+            <h2 class="text-5xl pb-6 mb-20">просто, удобно, надёжно!</h2>
+            <div class="w-full h-4/6 self-center flex flex-col justify-between">
+            <p class="text-3xl">Купи ведро и получи второе в подарок!</p>
+            <p class="text-3xl">При покупке любого ведра, вы получаете второе ведро в подарок! Идеально для хранения, переноски и организации пространства.</p>
+                <div class='w-8/12 gap-3 grid grid-cols-4 grid-rows-2 p-4 bg-neutral-700 [&_*]:w-full [&_*]:text-4xl [&_*]:text-center [&_p]:bg-neutral-900'>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <h4>дней</h4>   
+                    <h4>часов</h4>
+                    <h4>минут</h4>
+                    <h4>секунд</h4>
+                </div>
+                <a href="#" class="block w-32 text-center bg-neutral-700 ml-60">Заказать</a>
+                </div>
+            <script src="https://kurs-mjqz.onrender.com/js/timer.js"></script>
+        </div>
+            <div class="w-5/12  h-full bg-contain overflow-hidden">
+                <div class="w-mainA relative bg-[url('https://kurs-mjqz.onrender.com/images/загруженное22.png')] bg-no-repeat bg-center" id="main"></div>
+            </div>
+    </section>
+    <section class="w-11/12 flex h-full  text-5xl flex-col m-auto mt-12 justify-around p-6 bg-neutral-900">
+        <h2 class="m-auto pb-6">О Ведре</h2>
+        <article class="w-full h-5/6 [&_div]:h-5/6 [&_article]:h-4/6 [&_div]:w-10/12 place-items-center self-center grid grid-cols-3 gap-3">
+            <div class="text-center pb-6 bg-neutral-700      col-start-1">
+                <article class=" bg-contain bg-no-repeat bg-center bg-[url('https://kurs-mjqz.onrender.com/images/image1.png')]"></article>
+                <p>Узнать больше</p>
+            </div>
+            <div class="text-center pb-6 hidden bg-neutral-700 col-start-1">
+                <article class=" bg-contain bg-no-repeat bg-center bg-[url('https://kurs-mjqz.onrender.com/images/загруженное.png')]"></article>
+                <p>Прочность</p>
+                <p class="text-2xl">Ведро является прочным и надежным контейнером, который может использоваться для переноски большого количества жидкости, песка, земли или других материалов.</p>
+            </div>
+            <div class="text-center pb-6 bg-neutral-700 col-start-2">
+                <article class=" bg-contain bg-no-repeat bg-center bg-[url('https://kurs-mjqz.onrender.com/images/image1.png')]"></article>
+                <p>Узнать больше</p>
+            </div>
+            <div class="text-center pb-6 hidden bg-neutral-700 col-start-2">
+                <article class=" bg-contain bg-no-repeat bg-center bg-[url('https://kurs-mjqz.onrender.com/images/загруженное55.png')]"></article>
+                <p>Чистота</p>
+                <p class="text-2xl">Ведро легко моется и поддается дезинфекции, что делает его удобным для использования в бытовых целях, а также в сельском хозяйстве и строительстве.</p>
+            </div>
+            <div class="text-center pb-6 bg-neutral-700 col-start-3">
+                <article class=" bg-contain bg-no-repeat bg-center bg-[url('https://kurs-mjqz.onrender.com/images/image1.png')]"></article>
+                <p>Узнать больше</p>
+            </div>
+            <div class="text-center pb-6 hidden bg-neutral-700 col-start-3">
+                <article class=" bg-contain bg-no-repeat bg-center bg-[url('https://kurs-mjqz.onrender.com/images/загруженное6.png')]"></article>
+                <p>Удобства</p>
+                <p class="text-2xl">Благодаря своей форме и удобной ручке, ведро легко переносить и использовать без усилий, что делает его универсальным и удобным инструментом для различных задач.</p>
+            </div>
+        </article>
+        <script src="https://kurs-mjqz.onrender.com/js/card.js"></script>
+    </section>
+    <section id="scroll" class="w-11/12 flex h-full  text-5xl flex-col m-auto mt-12 items-center justify-around p-6 bg-neutral-900">
+        <h2 class="m-auto pb-6">Каталог</h2>
+            <article class="opacity-0 grid h-5/6 gap-6 grid-rows-2 grid-cols-6 text-5xl m-auto mt-12 justify-around p-12 bg-neutral-700 [&_*]:col-span-2">
+                <img src="https://kurs-mjqz.onrender.com/images/загруженное11.png" class="z-20">
+                <img src="https://kurs-mjqz.onrender.com/images/загруженное22.png" class="z-20">
+                <img src="https://kurs-mjqz.onrender.com/images/загруженное33.png" class="z-20">
+                <div class="flex justify-center items-end p-20 bg-neutral-900 z-10">
+                    <a href="#" class="text-center block text-center bg-neutral-700 pb-2">заказать</a>
+                </div>
+                <div class="flex justify-center items-end p-20 bg-neutral-900 z-10">
+                    <a href="#" class="text-center block text-center bg-neutral-700 pb-2">заказать</a>
+                </div>
+                <div class="flex justify-center items-end p-20 bg-neutral-900 z-10">
+                    <a href="#" class="text-center block text-center bg-neutral-700 pb-2">заказать</a>
+                </div>
+            </article>
+            <article class="opacity-0 grid h-5/6 gap-6 grid-rows-2 grid-cols-6 text-5xl m-auto mt-12 justify-around p-12 bg-neutral-700 [&_*]:col-span-2">
+                <img src="https://kurs-mjqz.onrender.com/images/загруженное33.png" class="z-20">
+                <img src="https://kurs-mjqz.onrender.com/images/загруженное22.png" class="z-20">
+                <img src="https://kurs-mjqz.onrender.com/images/загруженное11.png" class="z-20">
+                <div class="flex justify-center items-end p-20 bg-neutral-900 z-10">
+                    <a href="#" class="text-center block text-center bg-neutral-700 pb-2">заказать</a>
+                </div>
+                <div class="flex justify-center items-end p-20 bg-neutral-900 z-10">
+                    <a href="#" class="text-center block text-center bg-neutral-700 pb-2">заказать</a>
+                </div>
+                <div class="flex justify-center items-end p-20 bg-neutral-900 z-10">
+                    <a href="#" class="text-center block text-center bg-neutral-700 pb-2">заказать</a>
+                </div>
+            </article>
+            <article class="opacity-0 grid h-5/6 gap-6 grid-rows-2 grid-cols-6 text-5xl m-auto mt-12 justify-around p-12 bg-neutral-700 [&_*]:col-span-2">
+                <img src="https://kurs-mjqz.onrender.com/images/загруженное22.png" class="z-20">
+                <img src="https://kurs-mjqz.onrender.com/images/загруженное33.png" class="z-20">
+                <img src="https://kurs-mjqz.onrender.com/images/загруженное11.png" class="z-20">
+                <div class="flex justify-center items-end p-20 bg-neutral-900 z-10">
+                    <a href="#" class="text-center block text-center bg-neutral-700 pb-2">заказать</a>
+                </div>
+                <div class="flex justify-center items-end p-20 bg-neutral-900 z-10">
+                    <a href="#" class="text-center block text-center bg-neutral-700 pb-2">заказать</a>
+                </div>
+                <div class="flex justify-center items-end p-20 bg-neutral-900 z-10">
+                    <a href="#" class="text-center block text-center bg-neutral-700 pb-2">заказать</a>
+                </div>
+            </article>
+    </section>
+    <script src="https://kurs-mjqz.onrender.com/js/scroller.js"></script>
+    <section class="w-11/12 flex flex-col justify-evenly items-center   text-3xl m-auto mt-12 py-6  bg-neutral-900 [&_p]:text-center">
+        <h2 class="m-auto text-5xl pb-6 text-center">Комментарии</h2>
+        <article id="comm" class="w-full flex flex-col items-center justify-between p-10 flex-wrap"></article>
+        <a class="block w-32 text-center bg-neutral-700 ml-60 randomBtn">далее</a>
+        <div class="w-max h-12  bg-neutral-900 fixed top-2/4 p-2" id="add" style="transform: rotateZ(-90deg);right: -200px;">добавить комментарий</div>
+    </section>
+    <article id="hide" class="w-full h-full flex justify-center items-center fixed bg-neutral-800 bottom-0 left-0 z-50 opacity-70 hidden">
+        <p class="absolute left-0 top-0">закрыть</p>
+        <form action="/commAdd" method="post" id="formComm" enctype="multipart/form-data" class="flex flex-col items-center w-3/12 my-auto h-3/6 py-6 bg-neutral-600">
+            <h2 class="text-5xl mb-6">Оставь комментарий</h2>
+            <input name="userUser" type="text" id="user" placeholder="Ваше имя" class=" w-10/12 mb-6 h-20 bg-neutral-900" required>
+            <input type="file" name="img" id="file" accept=".jpg,.png,.jpeg" class="w-10/12 mb-6 h-20 bg-neutral-900">
+            <textarea name="userComment" id="comment" placeholder="Ваш отзыв" class=" w-10/12 mb-6 h-20 bg-neutral-900" required></textarea>
+            <input type="submit" class=" w-10/12 h-20 bg-neutral-900">
+        </form>
+    </article>
+    <script src="https://kurs-mjqz.onrender.com/js/comment.js"></script>
+    <section class="w-11/12 flex text-3xl m-auto mt-12 justify-evenly py-6  bg-neutral-900">
+        <canvas id="canvas" width="800px" height="800px" class="z-20"></canvas>
+        <article id="cube" class="w-6/12">
+            <div id="back" class="absolute w-max bg-neutral-900 h-4/6 my-20 border-4 z-10 border-neutral-700 flex justify-evenly items-center flex-col p-4" style="left:23%;">
+                <h2 class="text-8xl">10%</h2>
+                <p class="text-5xl text-center">ваша скидка на первую покупку</p>
+            </div>
+            <div id="left" class="absolute w-max bg-neutral-900 h-4/6 my-20 border-4 z-10 border-neutral-700 flex justify-evenly items-center flex-col p-4" style="left:23%;">
+                <h2 class="text-8xl">5%</h2>
+                <p class="text-5xl text-center">ваша скидка на первую покупку</p>
+            </div>
+            <div id="right" class="absolute w-max bg-neutral-900 h-4/6 my-20 border-4 z-10 border-neutral-700 flex justify-evenly items-center flex-col p-4" style="left:23%;">
+                <h2 class="text-8xl">15%</h2>
+                <p class="text-5xl text-center">ваша скидка на первую покупку</p>
+            </div>
+            <div id="top" class="absolute w-max bg-neutral-900 h-4/6 my-20 border-4 z-10 border-neutral-700 flex justify-evenly items-center flex-col p-4" style="left:23%;">
+                <h2 class="text-8xl">30%</h2>
+                <p class="text-5xl text-center">ваша скидка на первую покупку</p>
+            </div>
+            <div id="front" class="absolute w-max bg-neutral-900 h-4/6 my-20 border-4 z-10 border-neutral-700 flex justify-evenly items-center flex-col p-4" style="left:23%;">
+                <h2 class="text-8xl"></h2>
+                <p class="text-5xl text-center">нажми что бы получить скидку </p>
+            </div>
+            <div id="bottom" class="absolute w-max bg-neutral-900 h-4/6 my-20 border-4 z-10 border-neutral-700 flex justify-evenly items-center flex-col p-4" style="left:23%;">
+                <h2 class="text-8xl">10%</h2>
+                <p class="text-5xl text-center">ваша скидка на первую покупку</p>
+            </div>
+        </article>
+        <script src="https://kurs-mjqz.onrender.com/js/clearFild.js"></script>
+        <form action="/" method="post" id="form" class="flex flex-col items-center w-3/12 my-auto h-full py-6 bg-neutral-700">
+            <h2 class="text-4xl mb-6">Закажи ведро</h2>
+            <input name="userName" type="text" id="Name" placeholder="Ваше имя" class=" w-10/12 mb-6 h-20 bg-neutral-900" required>
+            <input name="userEmail" type="email" id="Email" placeholder="Ваш email" class=" w-10/12 mb-6 h-20 bg-neutral-900" required>
+            <input type="submit" class=" w-10/12 h-20 bg-neutral-900">
+        </form>
+        <div class="absolute flex items-center hidden z-30 bg-neutral-900" style="right: -50%;" id="error"><canvas id="smile"></canvas></div>
+        <script src="https://kurs-mjqz.onrender.com/js/smilik.js"></script>
+    </section>
+    <footer class="w-full m-auto mt-12 h-34 flex px-20 items-center justify-center bg-neutral-900">
+        <canvas height="136" width="1700" class="absolute"></canvas>
+        <article class="w-5/12 gap-3 grid grid-cols-2 p-2 grid-rows-3">
+        <div class="w-full h-8 opacity-0 z-10 bg-neutral-900 flex items-center">Телефон</div>
+        <div class="w-full h-8 opacity-0 z-10 bg-neutral-900 flex items-center">Email</div>
+        <div class="w-full h-8 opacity-0 z-10 bg-neutral-900 flex items-center">+79999999999</div>
+        <div class="w-full h-8 opacity-0 z-10 bg-neutral-900 flex items-center">bucckek106.@mail.ru</div>
+        <div class="w-full row-span-full col-span-2 h-8 opacity-0 z-10 bg-neutral-900 flex items-center">Все права защищены bucckek106.@mail.ru</div>
+        </article>
+        <script src="https://kurs-mjqz.onrender.com/js/footer.js"></script>
+        <script src="https://kurs-mjqz.onrender.com/js/smollAnimation.js"></script>
+    </footer>
+</body>
+</html>
