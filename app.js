@@ -27,7 +27,7 @@ let transporter = nodemailer.createTransport({
 });
 appExpress.get('/',(_, response)=>response.sendFile(__dirname + "/index.html"));
 appExpress.get('/code',async (_, response)=>{
-  const qr = await qrcode.toDataURL('https://github.com/Yaroslav191-kononov/kurs.git');
+  const qr = await qrcode.toDataURL('https://github.com/Yaroslav191-kononov/bukkec.git');
   response.send(qr);
 });
 appExpress.use(express.static(path.join(__dirname, 'public')));
