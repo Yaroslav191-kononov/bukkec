@@ -12,7 +12,7 @@ function CommentSee() {
         data.forEach((elem, index) => {
             let str;
             console.log(Object.values(elem)[2]);
-            let img = Object.values(elem)[2] ? 'http://localhost:3000/uploads/' + Object.values(elem)[2] : 'http://localhost:3000/images/user.png';
+            let img = Object.values(elem)[2] ? 'https://bukkec-production.up.railway.app/uploads/' + Object.values(elem)[2] : 'https://bukkec-production.up.railway.app/images/user.png';
             str = `
                         <div class="bg-neutral-700 w-full p-6 h-full m-4 CommentBlock">
                             <div class="flex justify-between">
