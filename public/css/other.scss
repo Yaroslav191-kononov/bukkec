@@ -1,0 +1,26 @@
+.glitch:before {
+   left: 3px;
+   text-shadow: -3px 0 red;
+   animation: glitch-one 2s linear 0s infinite alternate;
+}
+.glitch:after {
+   left: -3px;
+   text-shadow: -3px 0 blue;
+   animation: glitch-two 2s linear 0s infinite alternate;
+}
+@keyframes glitch-one {
+    $steps: 20;
+    @for $i from 0 through $steps {
+       #{percentage($i*(1/$steps))} {
+          clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+       }
+    }
+ }
+ @keyframes glitch-two {
+   $steps: 20;
+   @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+         clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+      }
+   }
+}

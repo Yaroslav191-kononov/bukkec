@@ -27,7 +27,7 @@ let transporter = nodemailer.createTransport({
 });
 appExpress.get('/',(_, response)=>response.sendFile(__dirname + "/index.html"));
 appExpress.get('/code',async (_, response)=>{
-  const qr = await qrcode.toDataURL('https://github.com/Yaroslav191-kononov/bukkec.git');
+  const qr = await qrcode.toDataURL('https://github.com/Yaroslav191-kononov/kurs.git');
   response.send(qr);
 });
 appExpress.use(express.static(path.join(__dirname, 'public')));
@@ -95,4 +95,4 @@ function SendMassege(userEmail){
   })
   console.log(message);
   }
-  appExpress.listen(10000, '0.0.0.0', ()=>console.log("(http://localhost:10000/, '0.0.0.0')Сервер запущен..."));
+  appExpress.listen(3000, ()=>console.log("(http://localhost:3000/)Сервер запущен..."));

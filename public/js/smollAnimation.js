@@ -22,12 +22,32 @@ buttons.forEach((elem)=>{
             deg++ == 360?deg=0:null;
         },10)
     });
+    elem.addEventListener('click', (event)=>{
+        event.preventDefault();
+        const numberOfBuckets = Math.floor(Math.random() * 5) + 3;
+        for (let i = 0; i < numberOfBuckets; i++) {
+            const bucket = document.createElement('div');
+            bucket.classList.add('bucket');
+            const angle = Math.random() * 2 * Math.PI;
+            const distance = Math.random() * 200 + 50;
+            const xOffset = Math.cos(angle) * distance;
+            const yOffset = Math.sin(angle) * distance;
+            const rotation = (angle * 180 / Math.PI) + (Math.random() * 20 - 10);
+            bucket.style.setProperty('--x', xOffset + 'px');
+            bucket.style.setProperty('--y', yOffset + 'px');
+            bucket.style.setProperty('--rotation', rotation + 'deg');
+            elem.appendChild(bucket);
+            bucket.addEventListener('animationend', () => {
+                bucket.remove();
+            });
+        }
+    });
 });
 let checkFoter=true;
 let checkComment=true;
 window.onscroll = function() {
 	if(document.documentElement.scrollTop>=3800 && checkFoter){
-        addFooter();
+        AppearContent();
         checkFoter=false;
     }
     else if(document.documentElement.scrollTop>3000 && checkComment){
@@ -39,22 +59,22 @@ let mainElem=document.querySelector("#main");
 let mainAnimation=[
     {
         margin:"0 -20% 0 0",
-        img:"https://kurs-mjqz.onrender.com/images/загруженное55.png",
+        img:"http://localhost:3000/images/загруженное55.png",
         shadow:"drop-shadow(-8px 8px 10px rgb(225, 233, 234))"
     },
     {
         margin:"0 0 0 -50%",
-        img:"https://kurs-mjqz.onrender.com/images/загруженное33.png",
+        img:"http://localhost:3000/images/загруженное33.png",
         shadow:"drop-shadow(8px -8px 10px rgb(225, 233, 234))"
     },
     {
         margin:"0 -20% 0 0",
-        img:"https://kurs-mjqz.onrender.com/images/загруженное22.png",
+        img:"http://localhost:3000/images/загруженное22.png",
         shadow:"drop-shadow(-8px 8px 10px rgb(225, 233, 234))"
     },
     {
         margin:"0 0 0 -50%",
-        img:"https://kurs-mjqz.onrender.com/images/загруженное11.png",
+        img:"http://localhost:3000/images/загруженное11.png",
         shadow:"drop-shadow(8px -8px 10px rgb(225, 233, 234))"
     }
 ];
@@ -62,22 +82,22 @@ if(window.matchMedia("(max-width: 768px)").matches){
     mainAnimation=[
         {
             margin:"0 -50% 0 0",
-            img:"https://kurs-mjqz.onrender.com/images/загруженное55.png",
+            img:"http://localhost:3000/images/загруженное55.png",
         shadow:"drop-shadow(-8px 8px 10px rgb(225, 233, 234))"
         },
         {
             margin:"0 0 0 -30%",
-            img:"https://kurs-mjqz.onrender.com/images/загруженное33.png",
+            img:"http://localhost:3000/images/загруженное33.png",
         shadow:"drop-shadow(8px -8px 10px rgb(225, 233, 234))"
         },
         {
             margin:"0 -50% 0 0",
-            img:"https://kurs-mjqz.onrender.com/images/загруженное22.png",
+            img:"http://localhost:3000/images/загруженное22.png",
         shadow:"drop-shadow(-8px 8px 10px rgb(225, 233, 234))"
         },
         {
             margin:"0 0 0 -30%",
-            img:"https://kurs-mjqz.onrender.com/images/загруженное11.png",
+            img:"http://localhost:3000/images/загруженное11.png",
         shadow:"drop-shadow(8px -8px 10px rgb(225, 233, 234))"
         }
     ];
