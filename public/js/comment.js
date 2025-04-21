@@ -11,8 +11,7 @@ function CommentSee() {
         div.classList.add('flex', 'flex-wrap', 'justify-evenly', 'w-full');
         data.forEach((elem, index) => {
             let str;
-            console.log(Object.values(elem)[2]);
-            let img = Object.values(elem)[2] ? 'https://bukkec-production.up.railway.app/uploads/' + Object.values(elem)[2] : 'https://bukkec-production.up.railway.app/images/user.png';
+            let img = Object.values(elem)[2] ? 'bukkec-production-49f4.up.railway.app/uploads/' + Object.values(elem)[2] : 'bukkec-production-49f4.up.railway.app/images/user.png';
             str = `
                         <div class="bg-neutral-700 w-full p-6 h-full m-4 CommentBlock">
                             <div class="flex justify-between">
@@ -149,9 +148,10 @@ function addRandom(text) {
                     test = setTimeout(FinalPlace, 500);
                 });
             }, 50);
-            CommentStep < CommentTextArr.length - 1 ? (CommentStep++, check=true) : CommentStep = 0;
+            check=true;
+            CommentStep < CommentTextArr.length - 1 ? (CommentStep++) : (CommentStep = 0);
         }, 2000);
-    }, CommentStep > 0 ? document.querySelector('#_' + (CommentStep - 1)).parentElement.querySelectorAll("span").length * 20 : document.querySelector('#_' + (CommentTextArr.length - 1)).parentElement.querySelectorAll("span") * 20);
+    }, CommentStep > 0 ? document.querySelector('#_' + (CommentStep - 1)).parentElement.querySelectorAll("span").length * 20 : document.querySelector('#_' + (CommentTextArr.length - 1)).parentElement.querySelectorAll("span").length * 20);
 }
 }
 randomBtn.forEach(elem => elem.addEventListener('click', () => addRandom(CommentTextArr[CommentStep])));

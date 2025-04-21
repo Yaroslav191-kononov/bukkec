@@ -6,30 +6,38 @@ document.querySelectorAll('header div a').forEach(elem => {
 function OnMoveHeader() {
     this.classList.toggle('hoverHeader');
 }
-const container = document.getElementById('bubbles');
-const bubbleCount = 80;
+let container = document.getElementById('bubbles');
+let bubbleCount = 80;
+let groupSize = 10;
+let bubler;
 function createBubbleGroup() {
-    const groupSize = 10;
-    for (let i = 0; i < groupSize; i++) {
-        const bubble = document.createElement('div');
-        bubble.className = 'bubble';
-        const size = Math.random() * 25 + 15;
-        const left = Math.random() * 100;
-        const duration = Math.random() * 5 + 5;
-        const xMovement = (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 40 + 20) + 'px';
-        bubble.style.width = `${size}px`;
-        bubble.style.height = `${size}px`;
-        bubble.style.left = `${left}%`;
-        bubble.style.animationDuration = `${duration}s`;
-        bubble.style.setProperty('--x-movement', xMovement);
-        container.appendChild(bubble);
-        bubble.addEventListener('animationend', ()=>bubble.remove());
+    if(!window.matchMedia("(max-width: 1014px)").matches){
+        for (let i = 0; i < groupSize; i++) {
+            let bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            let size = Math.random() * 25 + 15;
+            let left = Math.random() * 100;
+            let duration = Math.random() * 5 + 5;
+            let xMovement = (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 40 + 20) + 'px';
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${left}%`;
+            bubble.style.animationDuration = `${duration}s`;
+            bubble.style.setProperty('--x-movement', xMovement);
+            container.appendChild(bubble);
+            bubble.addEventListener('animationend', ()=>bubble.remove());
+        }
+        bubler=setTimeout(createBubbleGroup, 8000 / (bubbleCount / groupSize));
     }
-    setTimeout(createBubbleGroup, 8000 / (bubbleCount / groupSize));
 }
 createBubbleGroup();
+window.addEventListener("resize",()=>{
+    clearTimeout(bubler);
+    bubler=setTimeout(createBubbleGroup, 8000 / (bubbleCount / groupSize));
+    document.querySelectorAll(".bubble").forEach((elem)=>elem.remove());
+});
 async function getQrCode() {
-    let qr = await fetch("https://bukkec-production.up.railway.app/code");
+    let qr = await fetch("http://localhost:3000/code");
     qr = await qr.text();
     let img = document.createElement("img");
     img.style.height = "70px";

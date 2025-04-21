@@ -5,24 +5,24 @@ if (canvas.getContext) {
   ctx.fillStyle = window.getComputedStyle(document.querySelector('body')).getPropertyValue('background-color');
   ctx.strokeStyle = window.getComputedStyle(document.querySelector('body')).getPropertyValue('color');
   ctx.font = 'bold 75px Dela Gothic One serif';
-  if ((window.matchMedia("(max-width: 768px)").matches)) {
-    ctx.fillRect(80, 80, 650, 650);
-    ctx.strokeText("Сотри меня", 190, 670);
-  }
-  else {
-    ctx.fillRect(100, 80, 650, 650);
+  if ((window.matchMedia("(max-width: 1240px)").matches)) {
+    ctx.fillRect((820.4-650)/2, 80, 650, 650);
     ctx.strokeText("Сотри меня", 210, 670);
   }
+  else {
+    ctx.fillRect(120, 80, 650, 650);
+    ctx.strokeText("Сотри меня", 240, 670);
+  }
   const img = new Image();
-  img.src = "https://bukkec-production.up.railway.app/images/image1.png";
+  img.src = "bukkec-production-49f4.up.railway.app/images/image1.png";
   img.onload = function () {
     const pattern = ctx.createPattern(img, "no-repeat");
     ctx.fillStyle = pattern;
-    if ((window.matchMedia("(max-width: 1024px)").matches)) {
-      ctx.translate(140, 100);
+    if ((window.matchMedia("(max-width: 1240px)").matches)) {
+      ctx.translate(160, 100);
     }
     else {
-      ctx.translate(160, 100);
+      ctx.translate(190, 100);
     }
     ctx.fillRect(0, 0, 650, 650);
   };

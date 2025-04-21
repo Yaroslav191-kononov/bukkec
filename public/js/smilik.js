@@ -37,7 +37,7 @@ function inputCheck(){
 let ctx,cpxL=60,cpxR=90,cpy=55,size=8,smileOnTimer,smileOffTimer;
 function drawSmile(){
 ctx.clearRect(0, 0, canvas.width, canvas.height);
-ctx.fillStyle = "rgb(23 23 23)";
+ctx.fillStyle = "#e5e7eb";
 ctx.beginPath();
 ctx.arc(75,75,50,0,Math.PI*2,true);
 ctx.fill();
