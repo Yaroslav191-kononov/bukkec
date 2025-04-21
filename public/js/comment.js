@@ -11,7 +11,7 @@ function CommentSee() {
         div.classList.add('flex', 'flex-wrap', 'justify-evenly', 'w-full');
         data.forEach((elem, index) => {
             let str;
-            let img = Object.values(elem)[2] ? 'bukkec-production-49f4.up.railway.app/uploads/' + Object.values(elem)[2] : 'bukkec-production-49f4.up.railway.app/images/user.png';
+            let img = Object.values(elem)[2] ? 'https://bukkec-production-49f4.up.railway.app/uploads/' + Object.values(elem)[2] : 'https://bukkec-production-49f4.up.railway.app/images/user.png';
             str = `
                         <div class="bg-neutral-700 w-full p-6 h-full m-4 CommentBlock">
                             <div class="flex justify-between">

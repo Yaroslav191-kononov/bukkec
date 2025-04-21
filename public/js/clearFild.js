@@ -14,7 +14,7 @@ if (canvas.getContext) {
     ctx.strokeText("Сотри меня", 240, 670);
   }
   const img = new Image();
-  img.src = "bukkec-production-49f4.up.railway.app/images/image1.png";
+  img.src = "https://bukkec-production-49f4.up.railway.app/images/image1.png";
   img.onload = function () {
     const pattern = ctx.createPattern(img, "no-repeat");
     ctx.fillStyle = pattern;

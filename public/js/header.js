@@ -37,7 +37,7 @@ window.addEventListener("resize",()=>{
     document.querySelectorAll(".bubble").forEach((elem)=>elem.remove());
 });
 async function getQrCode() {
-    let qr = await fetch("http://localhost:3000/code");
+    let qr = await fetch("https://bukkec-production-49f4.up.railway.app/code");
     qr = await qr.text();
     let img = document.createElement("img");
     img.style.height = "70px";

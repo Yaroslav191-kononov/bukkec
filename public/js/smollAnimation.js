@@ -59,22 +59,22 @@ let mainElem=document.querySelector("#main");
 let mainAnimation=[
     {
         margin:"0 -20% 0 0",
-        img:"bukkec-production-49f4.up.railway.app/images/загруженное55.png",
+        img:"https://bukkec-production-49f4.up.railway.app/images/загруженное55.png",
         shadow:"drop-shadow(-8px 8px 10px rgb(225, 233, 234))"
     },
     {
         margin:"0 0 0 -50%",
-        img:"bukkec-production-49f4.up.railway.app/images/загруженное33.png",
+        img:"https://bukkec-production-49f4.up.railway.app/images/загруженное33.png",
         shadow:"drop-shadow(8px -8px 10px rgb(225, 233, 234))"
     },
     {
         margin:"0 -20% 0 0",
-        img:"bukkec-production-49f4.up.railway.app/images/загруженное22.png",
+        img:"https://bukkec-production-49f4.up.railway.app/images/загруженное22.png",
         shadow:"drop-shadow(-8px 8px 10px rgb(225, 233, 234))"
     },
     {
         margin:"0 0 0 -50%",
-        img:"bukkec-production-49f4.up.railway.app/images/загруженное11.png",
+        img:"https://bukkec-production-49f4.up.railway.app/images/загруженное11.png",
         shadow:"drop-shadow(8px -8px 10px rgb(225, 233, 234))"
     }
 ];
@@ -82,22 +82,22 @@ if(window.matchMedia("(max-width: 768px)").matches){
     mainAnimation=[
         {
             margin:"0 -50% 0 0",
-            img:"bukkec-production-49f4.up.railway.app/images/загруженное55.png",
+            img:"https://bukkec-production-49f4.up.railway.app/images/загруженное55.png",
         shadow:"drop-shadow(-8px 8px 10px rgb(225, 233, 234))"
         },
         {
             margin:"0 0 0 -30%",
-            img:"bukkec-production-49f4.up.railway.app/images/загруженное33.png",
+            img:"https://bukkec-production-49f4.up.railway.app/images/загруженное33.png",
         shadow:"drop-shadow(8px -8px 10px rgb(225, 233, 234))"
         },
         {
             margin:"0 -50% 0 0",
-            img:"bukkec-production-49f4.up.railway.app/images/загруженное22.png",
+            img:"https://bukkec-production-49f4.up.railway.app/images/загруженное22.png",
         shadow:"drop-shadow(-8px 8px 10px rgb(225, 233, 234))"
         },
         {
             margin:"0 0 0 -30%",
-            img:"bukkec-production-49f4.up.railway.app/images/загруженное11.png",
+            img:"https://bukkec-production-49f4.up.railway.app/images/загруженное11.png",
         shadow:"drop-shadow(8px -8px 10px rgb(225, 233, 234))"
         }
     ];
