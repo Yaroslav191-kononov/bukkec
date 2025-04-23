@@ -20,9 +20,11 @@ const particleDensities = {
   water: 0.6
 };
 let particles = [];
+let BucketCheck=true;
 const bucketHeight = parseInt(getComputedStyle(bucket).height);
 function addParticles(type, cost) {
-  if(parseInt(getComputedStyle(bucket).height)>0){
+  if(parseInt(getComputedStyle(bucket).height)>0 && BucketCheck){
+    BucketCheck=false;
     const bucketRect = bucket.getBoundingClientRect();
     const size = getRandomFloat(particleSizes[type].min, particleSizes[type].max);
     for (let i = 0; i < cost; i++) {
@@ -63,6 +65,8 @@ function addParticles(type, cost) {
         }, TimeFALL * 1000);
       }
     }
+    console.log(1.5 * particleDensities[type]*1000);
+    setTimeout(()=>BucketCheck=true,1.5 * particleDensities[type]*500);
     bucket.style.height=bucket.offsetHeight-size>0?bucket.offsetHeight-size + "px":"0px"; 
     bucket.style.bottom=parseInt(getComputedStyle(bucket).bottom)+size-1 + "px";
   }

@@ -7,6 +7,7 @@ const urlencodedParser = express.urlencoded({extended: false});
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('mydatabase.db');
 const qrcode = require('qrcode');
+const url = require('node:url');
 // let { app, BrowserWindow } = require('electron');
 // const createWindow = () => {
 //   const win = new BrowserWindow({
@@ -26,7 +27,7 @@ let transporter = nodemailer.createTransport({
   },
 });
 appExpress.get('/',(_, response)=>response.sendFile(__dirname + "/index.html"));
-appExpress.get('/code',async (_, response)=>{
+appExpress.get('/code',async (reg, response)=>{
   const qr = await qrcode.toDataURL('https://github.com/Yaroslav191-kononov/bukkec');
   response.send(qr);
 });

@@ -6,8 +6,8 @@ if (canvas.getContext) {
   ctx.strokeStyle = window.getComputedStyle(document.querySelector('body')).getPropertyValue('color');
   ctx.font = 'bold 75px Dela Gothic One serif';
   if ((window.matchMedia("(max-width: 1240px)").matches)) {
-    ctx.fillRect((820.4-650)/2, 80, 650, 650);
-    ctx.strokeText("Сотри меня", 210, 670);
+    ctx.fillRect((800.4-650)/2, 80, 650, 650);
+    ctx.strokeText("Сотри меня", 190, 670);
   }
   else {
     ctx.fillRect(120, 80, 650, 650);
@@ -19,7 +19,7 @@ if (canvas.getContext) {
     const pattern = ctx.createPattern(img, "no-repeat");
     ctx.fillStyle = pattern;
     if ((window.matchMedia("(max-width: 1240px)").matches)) {
-      ctx.translate(160, 100);
+      ctx.translate(140, 100);
     }
     else {
       ctx.translate(190, 100);
