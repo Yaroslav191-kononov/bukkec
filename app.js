@@ -80,19 +80,7 @@ function SendMassege(userEmail){
     from: 'Buccek Comp <buccek@mail.ru>',
     to: `${userEmail}, ${userEmail}`,
     subject: 'подтвердите покупку',
-    text: '',
-    html:`<div style="
-    width:100%;
-    height:100%;
-    bacground:black;
-    font-family: verdana;
-    ">
-    <div style="
-    margin:100px 100px;
-    bacground:silver;
-    color:white;
-    "><h2>вы совершили покупку</h2></div>
-    </div>`
+    text: 'вы совершили покупку'
   })
   console.log(message);
   }
