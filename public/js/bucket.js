@@ -24,6 +24,7 @@ let BucketCheck=true;
 const bucketHeight = parseInt(getComputedStyle(bucket).height);
 function addParticles(type, cost) {
   if(parseInt(getComputedStyle(bucket).height)>0 && BucketCheck){
+    bucket.style.transition="0s";
     BucketCheck=false;
     const bucketRect = bucket.getBoundingClientRect();
     const size = getRandomFloat(particleSizes[type].min, particleSizes[type].max);
@@ -67,8 +68,8 @@ function addParticles(type, cost) {
     }
     console.log(1.5 * particleDensities[type]*1000);
     setTimeout(()=>BucketCheck=true,1.5 * particleDensities[type]*500);
-    bucket.style.height=bucket.offsetHeight-size>0?bucket.offsetHeight-size + "px":"0px"; 
-    bucket.style.bottom=parseInt(getComputedStyle(bucket).bottom)+size-1 + "px";
+    setTimeout(() => {bucket.style.height=bucket.offsetHeight-size>0?bucket.offsetHeight-size + "px":"0px"; 
+    bucket.style.bottom=parseInt(getComputedStyle(bucket).bottom)+size-1 + "px";},  particleDensities[type]*800);
   }
 }
 
@@ -78,8 +79,9 @@ function getRandomFloat(min, max) {
 addSandButton.addEventListener('click', () => addParticles('sand', 100));
 addStonesButton.addEventListener('click', () => addParticles('stone', 50));
 addWaterButton.addEventListener('click', () => addParticles('water', 150));
-resetButton.addEventListener('click', () => {;
-  bucket.style.height="400px";
+resetButton.addEventListener('click', () => {
+  bucket.style.transition="1s";
+  bucket.style.height="70%";
   bucket.style.bottom="0px";
   for (let i = particles.length - 1; i >= 0; i--) {
     const particle = particles[i];

@@ -1,21 +1,28 @@
-let choise = document.querySelectorAll('section:nth-of-type(2) article>div');
-choise.forEach((elem, index, array) => index % 2 == 0 ? (
-    elem.addEventListener('click', ChoiseDisappear.bind(elem, array[index + 1], index + 1, array)),
-    elem.addEventListener('mouseenter', OnMove.bind(elem)),
-    elem.addEventListener('mouseleave', OnMove.bind(elem))
-) : null);
+let choise = document.querySelectorAll('section:nth-of-type(2) article > div'); 
+choise.forEach((elem, index) => {
+    if (index % 2 === 0) { 
+
+        elem.addEventListener('click', ChoiseDisappear.bind(elem, choise[index + 1], index + 1, choise)); 
+        elem.addEventListener('mouseenter', OnMove.bind(elem));  
+        elem.addEventListener('mouseleave', OnMove.bind(elem));  
+    }
+});
+
 function ChoiseDisappear(afterDisappear, index, array) {
     this.classList.add('activeInfo');
+    this.classList.add('fadeOut'); 
     setTimeout(() => {
         this.classList.add('hidden');
         afterDisappear.classList.remove('hidden');
         afterDisappear.classList.remove('activeInfo');
-        if (window.matchMedia("(max-width: 1024px)").matches) {
-            index >= array.length - 1 ? index = 1 : index += 2;
-            afterDisappear.addEventListener('click', ChoiseDisappear.bind(afterDisappear, array[index], index, array))
-        };
+        afterDisappear.classList.add('fadeIn'); 
+        afterDisappear.classList.remove('fadeOut');
         Linear_Bg(afterDisappear, false);
-    }, 1000);
+        if (window.matchMedia("(max-width: 1024px)").matches) {
+            let nextIndex = index >= array.length - 2 ? 0 : index + 2; 
+            afterDisappear.addEventListener('click', ChoiseDisappear.bind(afterDisappear, array[nextIndex], nextIndex, array), { once: true });
+        }
+    }, 1000); 
 }
 function OnMove() {
     this.classList.toggle('hoverInfo');
