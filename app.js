@@ -22,8 +22,8 @@ let transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-      user: 'buccek@mail.ru',
-      pass: 'aS3whCRhckTNNcjHyNh5',
+      user: '',
+      pass: '',
   },
 });
 appExpress.get('/',(_, response)=>response.sendFile(__dirname + "/index.html"));
